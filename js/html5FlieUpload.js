@@ -61,7 +61,7 @@
 	        timeout: option.outTime,
 	        cache: false,
 	        processData: false,
-	        contentType: "application/x-www-form-urlencoded;charset=utf-8",
+	        contentType:option.contentType||false,  // 为false 默认是 multipart/form-data boundary=----
 	        xhrFields: {
 	            withCredentials: true
 	        },

@@ -26,7 +26,7 @@
 		
 		<!--<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>-->
 		<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/flieUpload.js" type="text/javascript" charset="utf-8"></script><br />
+		<script src="js/html5FlieUpload.js" type="text/javascript" charset="utf-8"></script><br />
 		<script type="text/javascript">
 			
 			/***文件上传  start***/  
@@ -72,6 +72,7 @@
 						outTime: 30000,
 						el: $(obj), //当前element
 						size: 300*1000000, //1m=1000000
+						contentType:false,
 						seccess: function(data) {
 
 							$propress.hide();
