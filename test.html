@@ -16,7 +16,7 @@
 			<input class=" fileUp v-hide-text-index" type="file" name="" id="fileUp" value="" />
 
 			<!--进度条-->
-			<div class="progress-all v-hide">
+			<div class="progress-all d-hide">
 				<div class="progress-now"></div>
 				<div class="progress-num">0%</div>
 			</div>
@@ -73,7 +73,7 @@
 						el: $(obj), //当前element
 						size: 300*1000000, //1m=1000000
 						contentType:false,
-						seccess: function(data) {
+						success: function(data) {
 
 							$propress.hide();
 							var url = "img/img.jpg";
