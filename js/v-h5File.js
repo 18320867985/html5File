@@ -30,7 +30,7 @@
 	 * 
 	 * */
 
-	var h5File=(function($){
+	+function(){
 	
 	var fileUpload= function(option) {
 		
@@ -38,7 +38,6 @@
 			alert("参数有误！");
 			 return ;
 		}
-		
 		
 		if(option.size){
 			if(option.data.size>option.size){
@@ -100,9 +99,9 @@
 	};
 	
 	
-	return {
+	window.vh5File= {
 		upload:fileUpload
 		
 	};
 	
-	})(window.Zepto||window.jQuery);
+	}();

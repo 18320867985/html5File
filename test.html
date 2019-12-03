@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<link rel="stylesheet" type="text/css" href="css/flieUpload.css" />
+		<link rel="stylesheet" type="text/css" href="css/v-h5File.css" />
 	</head>
 
 	<body>
@@ -24,9 +24,9 @@
 			<img class="img" src="" alt="" />
 		</div>
 		
-		<!--<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>-->
-		<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/html5FlieUpload.js" type="text/javascript" charset="utf-8"></script><br />
+		<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<!-- <script src="js/zepto.js" type="text/javascript" charset="utf-8"></script> -->
+		<script src="js/v-h5File.js" type="text/javascript" charset="utf-8"></script><br />
 		<script type="text/javascript">
 			
 			/***文件上传  start***/  
@@ -56,7 +56,7 @@
 					var $img = $(obj).parents(".progress-box").find(".img");
 					var $propress = $(obj).parents(".progress-box").find(".progress-all");
 					$propress.show();
-					iframe.setHeight();
+					
 					
 					// 是否支持html5 文件上传
 					if(typeof obj.files==="undefined"){
@@ -66,7 +66,7 @@
 					
 					var file = obj.files[0];
 					
-					h5File.upload({
+				window.vh5File.upload({
 						data: file, //选择的文件
 						url: "./admin.html", //上传网址
 						outTime: 30000,
@@ -79,20 +79,17 @@
 							var url = "img/img.jpg";
 							$img.attr("src", url)
 							$(".file-txt").val(url);
-							vd1.check(); // 重新检测验证
-							iframe.setHeight();
-
+						
+			
 						}, //成功回调
 						error: function() {
-
 							$propress.hide();
 							// 发布删掉
 							var url = "images/板块图片2.png";
 							$img.show();
 							$img.attr("src", url)
 							$(".file-txt").val(url);
-							vd1.check(); // 重新检测验证
-							iframe.setHeight();
+							
 							//alert("上传发生错误")
 						} //错误回调
 
